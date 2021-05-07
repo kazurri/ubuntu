@@ -13,18 +13,9 @@ my ubuntu setting
 
 ```plaintext
 $ sudo -i
-# apt install bat
-# apt install curl
-# apt install exa
-# apt install fd-find
-# apt install fish
-# apt install fzf
-# apt install git
-# apt install golang
+# apt install bat curl exa fd-find fish fzf git ripgrep tmux
+# apt install golang python3-pip
 # apt install neovim
-# apt install python3-pip
-# apt install ripgrep
-# apt install tmux
 ```
 
 ### Service
