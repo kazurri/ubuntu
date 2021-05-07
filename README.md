@@ -11,16 +11,15 @@ my ubuntu setting
 
 ### Tool
 
-```plaintext
+```bash
 $ sudo -i
 # apt install bat curl exa fd-find fish fzf git ripgrep tmux
 # apt install golang python3-pip
-# apt install neovim
 ```
 
 ### Service
 
-```plaintext
+```bash
 $ sudo -i
 # apt install chrony
 # apt install openssh-server
@@ -30,9 +29,16 @@ $ sudo -i
 
 ### go
 
-```plaintext
+```bash
 $ su - ubuntu
 $ go get github.com/x-motemen/ghq
+```
+
+### neovim
+
+```bash
+$ sudo -i
+# apt install neovim
 ```
 
 ### Font
@@ -48,32 +54,32 @@ $ go get github.com/x-motemen/ghq
 
 ### fish
 
-```plaintext
-chsh -s /usr/bin/fish
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-fisher install decors/fish-ghq
-fisher install jethrokuan/fzf
-fisher install jethrokuan/z
-set -g fish_user_paths "$HOME/go/bin" $fish_user_paths
-ghq get kazurri/dotfiles
-Ctrl+g -> dotfiles
-cp -pr .config/fish ~/.config/
+```bash
+$ chsh -s /usr/bin/fish
+$ url https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+$ fisher install decors/fish-ghq
+$ fisher install jethrokuan/fzf
+$ fisher install jethrokuan/z
+$ set -g fish_user_paths "$HOME/go/bin" $fish_user_paths
+$ ghq get kazurri/dotfiles
+[C-g] -> dotfiles
+$ cp -pr .config/fish ~/.config/
 ```
 
 ### neovim
 
-```plaintext
+```bash
 [C-g] -> dotfiles
-cp -pr .config/nvim ~/.config/
+$ cp -pr .config/nvim ~/.config/
 ```
 
 ### tmux
 
-```plaintext
-mkdir -p ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```bash
+$ mkdir -p ~/.tmux/plugins
+$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 [C-g] -> dotfiles
-cp -p .tmux* ~/
+$ cp -p .tmux* ~/
 ```
 
 ## License
