@@ -5,7 +5,7 @@ my ubuntu setting
 
 ## Version
 
-* Ubuntu 21.04 (Hirsute Hippo)
+* Ubuntu 22.10 (Kinetic Kudu)
 
 ## Installation
 
@@ -27,56 +27,6 @@ $ sudo -i
 # apt install squid
 ```
 
-### cargo
-
-* cargoのインストール
-
-```shell
-$ sudo -i
-# apt install cargo
-```
-
-* rustツールのインストール
-
-```shell
-$ cargo install gitui bat lsd fd-find ripgrep
-```
-
-* 設定
-
-```shell
-$ set -g fish_user_paths "$HOME/.cargo/bin" $fish_user_paths
-```
-
-### ghq
-
-```shell
-$ go get github.com/x-motemen/ghq
-```
-
-* 設定
-
-```shell
-$ set -g fish_user_paths "$HOME/go/bin" $fish_user_paths
-```
-
-### neovim
-
-* インストール
-
-```shell
-$ sudo -i
-# apt install neovim
-```
-
-* 設定
-
-```shell
-$ ghq get kazurri/dotfiles
-[C-g] -> dotfiles
-$ cp -pr .config/nvim ~/.config/
-```
-
 ### fish
 
 * fishのインストール
@@ -89,18 +39,17 @@ $ sudo -i
 * fisherとツールのインストール
 
 ```shell
-$ url https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-$ fisher install decors/fish-ghq
-$ fisher install jethrokuan/fzf
-$ fisher install jethrokuan/z
+$ fish
+> curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+> fisher install decors/fish-ghq
+> fisher install jethrokuan/fzf
+> fisher install jethrokuan/z
 ```
 
 * 設定
 
 ```shell
-$ chsh -s /usr/bin/fish
-[C-g] -> dotfiles
-$ cp -pr .config/fish ~/.config/
+> chsh -s /usr/bin/fish
 ```
 
 ### starship
@@ -108,14 +57,7 @@ $ cp -pr .config/fish ~/.config/
 * インストール
 
 ```shell
-$ curl -fsSL https://starship.rs/install.sh | sh
-```
-
-* 設定
-
-```shell
-[C-g] -> dotfiles
-$ cp -p .config/starship.toml ~/.config/
+> curl -fsSL https://starship.rs/install.sh | sh
 ```
 
 ### tmux
@@ -130,15 +72,37 @@ $ sudo -i
 * TPMのインストール
 
 ```shell
-$ mkdir -p ~/.tmux/plugins
-$ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+> mkdir -p ~/.tmux/plugins
+> git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-* 設定
+### rust
+
+* rustのインストール
 
 ```shell
-[C-g] -> dotfiles
-$ cp -p .tmux* ~/
+> curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+* rustツールのインストール
+
+```shell
+> cargo install gitui bat lsd fd-find ripgrep
+```
+
+### ghq
+
+```shell
+> go install github.com/x-motemen/ghq@latestls
+```
+
+### neovim
+
+* インストール
+
+```shell
+$ sudo -i
+# apt install neovim
 ```
 
 ### Gnome Terminal
