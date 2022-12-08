@@ -11,7 +11,7 @@ my ubuntu setting
 
 ### Tool
 
-```shell
+```sh
 $ sudo -i
 # apt install git curl fzf
 # apt install python3-pip golang
@@ -19,7 +19,7 @@ $ sudo -i
 
 ### Service
 
-```shell
+```sh
 $ sudo -i
 # apt install chrony
 # apt install openssh-server
@@ -31,14 +31,14 @@ $ sudo -i
 
 * fishのインストール
 
-```shell
+```sh
 $ sudo -i
 # apt install fish
 ```
 
 * fisherとツールのインストール
 
-```shell
+```sh
 $ fish
 > curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 > fisher install decors/fish-ghq
@@ -48,7 +48,7 @@ $ fish
 
 * 設定
 
-```shell
+```sh
 > chsh -s /usr/bin/fish
 ```
 
@@ -56,7 +56,7 @@ $ fish
 
 * インストール
 
-```shell
+```sh
 > curl -fsSL https://starship.rs/install.sh | sh
 ```
 
@@ -64,14 +64,14 @@ $ fish
 
 * インストール
 
-```shell
+```sh
 $ sudo -i
 # apt install tmux
 ```
 
 * TPMのインストール
 
-```shell
+```sh
 > mkdir -p ~/.tmux/plugins
 > git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
@@ -80,19 +80,19 @@ $ sudo -i
 
 * rustのインストール
 
-```shell
+```sh
 > curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 * rustツールのインストール
 
-```shell
+```sh
 > cargo install gitui bat lsd fd-find ripgrep
 ```
 
 ### ghq
 
-```shell
+```sh
 > go install github.com/x-motemen/ghq@latestls
 ```
 
@@ -100,7 +100,7 @@ $ sudo -i
 
 * インストール
 
-```shell
+```sh
 $ sudo -i
 # apt install neovim
 ```
