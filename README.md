@@ -5,7 +5,7 @@ my ubuntu setting
 
 ## Version
 
-* Ubuntu 22.10 (Kinetic Kudu)
+- Ubuntu 22.10 (Kinetic Kudu)
 
 ## Installation
 
@@ -15,6 +15,7 @@ my ubuntu setting
 $ sudo -i
 # apt install git curl fzf
 # apt install python3-pip golang
+# apt install exa bat delta fd-find ripgrep
 ```
 
 ### Service
@@ -29,65 +30,73 @@ $ sudo -i
 
 ### fish
 
-* fishのインストール
+- fishのインストール
 
 ```sh
 $ sudo -i
 # apt install fish
 ```
 
-* fisherとツールのインストール
+- fisherとツールのインストール
 
 ```sh
 $ fish
-> curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+> curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 > fisher install decors/fish-ghq
 > fisher install jethrokuan/fzf
 > fisher install jethrokuan/z
 ```
 
-* 設定
+- 設定
 
 ```sh
-> chsh -s /usr/bin/fish
-```
-
-### starship
-
-* インストール
-
-```sh
-> curl -fsSL https://starship.rs/install.sh | sh
+$ chsh -s /usr/bin/fish
 ```
 
 ### tmux
 
-* インストール
+- インストール
 
 ```sh
-$ sudo -i
+> sudo -i
 # apt install tmux
 ```
 
-* TPMのインストール
+- TPMのインストール
 
 ```sh
 > mkdir -p ~/.tmux/plugins
 > git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-### rust
+### starship
 
-* rustのインストール
+- インストール
 
 ```sh
-> curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+> sudo -i
+$ curl -sS https://starship.rs/install.sh | sh
 ```
 
-* rustツールのインストール
+### gitui
+
+- インストール
 
 ```sh
-> cargo install gitui bat lsd fd-find ripgrep
+> sudo -i
+# curl -LO https://github.com/extrawurst/gitui/releases/latest/download/gitui-linux-musl.tar.gz
+# tar zxvf gitui-linux-musl.tar.gz
+# mv gitui /usr/local/bin/
+```
+
+### bottom
+
+- インストール
+
+```sh
+> sudo -i
+# curl -LO https://github.com/ClementTsang/bottom/releases/download/0.6.8/bottom_0.6.8_amd64.deb
+# dpkg -i bottom_0.6.8_amd64.deb
 ```
 
 ### ghq
@@ -98,21 +107,21 @@ $ sudo -i
 
 ### neovim
 
-* インストール
+- インストール
 
 ```sh
-$ sudo -i
+> sudo -i
 # apt install neovim
 ```
 
 ### Gnome Terminal
 
-* Preferences＞Unnamed＞Text
-  * Custom fontを指定してチェックを入れる
+- Preferences＞Unnamed＞Text
+  - Custom fontを指定してチェックを入れる
 
 ### Font
 
-* [HackGen](https://github.com/yuru7/HackGen/releases)
+- [HackGen](https://github.com/yuru7/HackGen/releases)
 
 ## License
 
